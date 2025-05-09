@@ -1,0 +1,211 @@
+[
+  {
+    "type": "user",
+    "message": {
+      "role": "user",
+      "content": "make me a red screen thats it"
+    },
+    "uuid": "12e2669b-8332-4c2c-b421-bae5258f08c6",
+    "trajectoryTurn": 0
+  },
+  {
+    "message": {
+      "id": "msg_01PzjzUfwr8miZEhrxvq5E8C",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "text",
+          "text": "I'll create a simple app with a red screen for you."
+        },
+        {
+          "type": "tool_use",
+          "id": "toolu_01KwjBKT8isAEXWJ55qPP64w",
+          "name": "GlobTool",
+          "input": {
+            "pattern": "**/*.tsx"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 4,
+        "cache_creation_input_tokens": 0,
+        "cache_read_input_tokens": 6006,
+        "output_tokens": 70
+      },
+      "ttftMs": 2002
+    },
+    "provider": "anthropic",
+    "costUSD": 0.0028637999999999997,
+    "durationMs": 3041,
+    "type": "assistant",
+    "uuid": "1379ca47-fa25-4fd9-9d6e-1fc801cc2d8e"
+  },
+  {
+    "type": "user",
+    "message": {
+      "role": "user",
+      "content": [
+        {
+          "type": "tool_result",
+          "content": "/Users/anshnanda/Developer/composer/local-agent/template-app/App.tsx",
+          "tool_use_id": "toolu_01KwjBKT8isAEXWJ55qPP64w"
+        }
+      ]
+    },
+    "uuid": "ad226af8-f6e0-45cb-8299-e609c220f25b",
+    "toolUseResult": {
+      "data": {
+        "filenames": [
+          "/Users/anshnanda/Developer/composer/local-agent/template-app/App.tsx"
+        ],
+        "durationMs": 6,
+        "numFiles": 1,
+        "truncated": false
+      },
+      "resultForAssistant": "/Users/anshnanda/Developer/composer/local-agent/template-app/App.tsx"
+    },
+    "trajectoryTurn": 1
+  },
+  {
+    "message": {
+      "id": "msg_01RUVYTKiMRvEAzDQ71Hd9QG",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "tool_use",
+          "id": "toolu_01YUR6ZJmRWrR5JfYkLt5DrC",
+          "name": "View",
+          "input": {
+            "file_path": "/Users/anshnanda/Developer/composer/local-agent/template-app/App.tsx"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 203,
+        "cache_read_input_tokens": 6006,
+        "output_tokens": 75
+      },
+      "ttftMs": 2531
+    },
+    "provider": "anthropic",
+    "costUSD": 0.00370605,
+    "durationMs": 3227,
+    "type": "assistant",
+    "uuid": "7b9adb1c-87dd-4567-9f1e-b4d7ae1ef272"
+  },
+  {
+    "type": "user",
+    "message": {
+      "role": "user",
+      "content": [
+        {
+          "type": "tool_result",
+          "content": "     1\timport { StatusBar } from \"expo-status-bar\";\n     2\timport { Text, View } from \"react-native\";\n     3\timport { SafeAreaProvider } from \"react-native-safe-area-context\";\n     4\timport { NavigationContainer } from \"@react-navigation/native\";\n     5\t\n     6\t/*\n     7\tIMPORTANT NOTICE: DO NOT REMOVE\n     8\tThere are already environment keys in the project. \n     9\tBefore telling the user to add them, check if you already have access to the required keys through bash.\n    10\tDirectly access them with process.env.${key}\n    11\t\n    12\tCorrect usage:\n    13\tprocess.env.EXPO_PUBLIC_{key}\n    14\t//directly access the key\n    15\t\n    16\tIncorrect usage:\n    17\timport { OPENAI_API_KEY } from '@env';\n    18\t//don't use @env, its depreicated\n    19\t\n    20\tIncorrect usage:\n    21\timport Constants from 'expo-constants';\n    22\tconst openai_api_key = Constants.expoConfig.extra.apikey;\n    23\t//don't use expo-constants, its depreicated\n    24\t\n    25\t*/\n    26\t\n    27\texport default function App() {\n    28\t  return (\n    29\t    <SafeAreaProvider>\n    30\t      <NavigationContainer>\n    31\t        <View className=\"flex-1 bg-red-500\">\n    32\t          <StatusBar style=\"light\" />\n    33\t        </View>\n    34\t      </NavigationContainer>\n    35\t    </SafeAreaProvider>\n    36\t  );\n    37\t}\n    38\t",
+          "tool_use_id": "toolu_01YUR6ZJmRWrR5JfYkLt5DrC"
+        }
+      ]
+    },
+    "uuid": "f049d791-6d34-47c5-82c8-5b3318f00d79",
+    "toolUseResult": {
+      "data": {
+        "type": "text",
+        "file": {
+          "filePath": "/Users/anshnanda/Developer/composer/local-agent/template-app/App.tsx",
+          "content": "import { StatusBar } from \"expo-status-bar\";\nimport { Text, View } from \"react-native\";\nimport { SafeAreaProvider } from \"react-native-safe-area-context\";\nimport { NavigationContainer } from \"@react-navigation/native\";\n\n/*\nIMPORTANT NOTICE: DO NOT REMOVE\nThere are already environment keys in the project. \nBefore telling the user to add them, check if you already have access to the required keys through bash.\nDirectly access them with process.env.${key}\n\nCorrect usage:\nprocess.env.EXPO_PUBLIC_{key}\n//directly access the key\n\nIncorrect usage:\nimport { OPENAI_API_KEY } from '@env';\n//don't use @env, its depreicated\n\nIncorrect usage:\nimport Constants from 'expo-constants';\nconst openai_api_key = Constants.expoConfig.extra.apikey;\n//don't use expo-constants, its depreicated\n\n*/\n\nexport default function App() {\n  return (\n    <SafeAreaProvider>\n      <NavigationContainer>\n        <View className=\"flex-1 bg-red-500\">\n          <StatusBar style=\"light\" />\n        </View>\n      </NavigationContainer>\n    </SafeAreaProvider>\n  );\n}\n",
+          "numLines": 38,
+          "startLine": 1,
+          "totalLines": 38
+        }
+      },
+      "resultForAssistant": "     1\timport { StatusBar } from \"expo-status-bar\";\n     2\timport { Text, View } from \"react-native\";\n     3\timport { SafeAreaProvider } from \"react-native-safe-area-context\";\n     4\timport { NavigationContainer } from \"@react-navigation/native\";\n     5\t\n     6\t/*\n     7\tIMPORTANT NOTICE: DO NOT REMOVE\n     8\tThere are already environment keys in the project. \n     9\tBefore telling the user to add them, check if you already have access to the required keys through bash.\n    10\tDirectly access them with process.env.${key}\n    11\t\n    12\tCorrect usage:\n    13\tprocess.env.EXPO_PUBLIC_{key}\n    14\t//directly access the key\n    15\t\n    16\tIncorrect usage:\n    17\timport { OPENAI_API_KEY } from '@env';\n    18\t//don't use @env, its depreicated\n    19\t\n    20\tIncorrect usage:\n    21\timport Constants from 'expo-constants';\n    22\tconst openai_api_key = Constants.expoConfig.extra.apikey;\n    23\t//don't use expo-constants, its depreicated\n    24\t\n    25\t*/\n    26\t\n    27\texport default function App() {\n    28\t  return (\n    29\t    <SafeAreaProvider>\n    30\t      <NavigationContainer>\n    31\t        <View className=\"flex-1 bg-red-500\">\n    32\t          <StatusBar style=\"light\" />\n    33\t        </View>\n    34\t      </NavigationContainer>\n    35\t    </SafeAreaProvider>\n    36\t  );\n    37\t}\n    38\t"
+    },
+    "trajectoryTurn": 2
+  },
+  {
+    "message": {
+      "id": "msg_0169JAUUGRAzj3t4ALVuDEtp",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "tool_use",
+          "id": "toolu_01UirsTsdEbeqxPmGB32yR7s",
+          "name": "Edit",
+          "input": {
+            "file_path": "/Users/anshnanda/Developer/composer/local-agent/template-app/App.tsx",
+            "old_string": "export default function App() {\n  return (\n    <SafeAreaProvider>\n      <NavigationContainer>\n        <View className=\"flex-1 bg-red-500\">\n          <StatusBar style=\"light\" />\n        </View>\n      </NavigationContainer>\n    </SafeAreaProvider>\n  );\n}",
+            "new_string": "export default function App() {\n  return (\n    <SafeAreaProvider>\n      <NavigationContainer>\n        <View className=\"flex-1 bg-red-500\">\n          <StatusBar style=\"light\" />\n        </View>\n      </NavigationContainer>\n    </SafeAreaProvider>\n  );\n}"
+          }
+        }
+      ],
+      "stop_reason": "tool_use",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 6,
+        "cache_creation_input_tokens": 508,
+        "cache_read_input_tokens": 6209,
+        "output_tokens": 261
+      },
+      "ttftMs": 2433
+    },
+    "provider": "anthropic",
+    "costUSD": 0.0077006999999999996,
+    "durationMs": 4844,
+    "type": "assistant",
+    "uuid": "46aedb1b-732b-4b6a-a40a-4d6cbd6b4305"
+  },
+  {
+    "type": "user",
+    "message": {
+      "role": "user",
+      "content": [
+        {
+          "type": "tool_result",
+          "content": "No changes to make: old_string and new_string are exactly the same.",
+          "is_error": true,
+          "tool_use_id": "toolu_01UirsTsdEbeqxPmGB32yR7s"
+        }
+      ]
+    },
+    "uuid": "86b6ae3d-26e0-46d0-8b88-de682ba2d3c0",
+    "trajectoryTurn": 3
+  },
+  {
+    "message": {
+      "id": "msg_01Qd4fZ8G29dm2NL1YhDWCwo",
+      "type": "message",
+      "role": "assistant",
+      "model": "claude-3-7-sonnet-20250219",
+      "content": [
+        {
+          "type": "text",
+          "text": "The app already has a red screen! The App.tsx file already contains a full-screen view with the class \"bg-red-500\" which gives it a red background color using Tailwind CSS. You can run the app and you'll see a simple red screen as requested."
+        }
+      ],
+      "stop_reason": "end_turn",
+      "stop_sequence": null,
+      "usage": {
+        "input_tokens": 7,
+        "cache_creation_input_tokens": 295,
+        "cache_read_input_tokens": 6717,
+        "output_tokens": 63
+      },
+      "ttftMs": 2688
+    },
+    "provider": "anthropic",
+    "costUSD": 0.00408735,
+    "durationMs": 4185,
+    "type": "assistant",
+    "uuid": "9037a5a8-d388-4b6d-9af1-bde5d082a099"
+  }
+]

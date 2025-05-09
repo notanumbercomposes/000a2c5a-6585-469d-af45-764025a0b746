@@ -1,0 +1,11 @@
+{
+  "totalCost": 0.05921085,
+  "contextUsedPercent": 7.581052631578947,
+  "contextUsedTokens": 14404,
+  "remainingTokens": 175596,
+  "compactedTurns": [],
+  "workingDirectory": "/Users/anshnanda/Developer/composer/local-agent/template-app",
+  "originalWorkingDirectory": "/Users/anshnanda/Developer/composer/local-agent/template-app",
+  "timestamp": "2025-05-09T03:11:08.783Z",
+  "wasCompacted": false
+}
